@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 col-sm-12"
+        search-table
+        ng-if='pageLoaded'
+        data-content='data'
+        data-labels="{'resource_type':'Resource Type', 'display_title':'Display Title', 'media_type':'Media Type', 'language':'Language'}"
+        data-clickable-prop='viewable'
+        on-row-click='viewDetails(item)'>
+    </div>
+
+  </div>
+</div>

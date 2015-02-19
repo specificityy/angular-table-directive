@@ -1,0 +1,51 @@
+<div>
+  <div class='row'>
+    <div class='col-md-5 col-sm-7 col-xs-6'>
+      <input type="text" class="form-control search-input" ng-model='data.searchText' placeholder="Search">
+    </div>
+
+    <div class='col-md-7 col-sm-5 col-xs-6'>
+
+      <nav class="pull-right">
+        <ul class="pager">
+          <li ng-class="{'disabled':currentPage===0}" ng-click='changePage(-1)'><a href="">Previous</a>
+          </li>
+          <li ng-class="{'disabled':currentPage>=filtered.length/pageSize-1}" ng-click='changePage(1)'><a href="">Next</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </div>
+
+  <div class='row'>
+    <div class='col-md-12 table-responsive'>
+      <table class='table search-table'>
+        <thead>
+          <tr>
+            <th ng-repeat='(value, key) in labels'>
+              <a href='' ng-click='sortTable($index)'>
+                {{::key}} <span class="glyphicon" ng-show='showSortCaret($index)' ng-class="{'glyphicon-triangle-top':!reverse,'glyphicon-triangle-bottom':reverse}"></span>
+              </a>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat='item in filtered = (content | filter:filterRows) | orderBy:customOrderBy:reverse | pageStartFilter:currentPage*pageSize | limitTo:pageSize'
+            ng-class="{'pointer':getClickable(item.content.resource),'disabled':!getClickable(item.content.resource)}"
+            ng-click='selectItem(item, item.content.resource)'>
+            <td ng-repeat='(key, value) in item.content.resource' ng-if='showCell(key)'>{{::value}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class='col-md-12'>
+      <label class="pull-right"><span class="badge">Page {{currentPage+1}}/{{numberOfPages()}}</span></label>
+    </div>
+  </div>
+
+</div>
