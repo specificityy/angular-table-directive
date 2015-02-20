@@ -8,7 +8,7 @@
   },
   "dependencies": {
 	"connect": "latest",
-	"server-static": "latest"
+	"serve-static": "latest"
   },
   "devDependencies": {
     "connect-livereload": "~0.3.2",
