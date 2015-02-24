@@ -67,7 +67,6 @@ define(['angular', 'directives/directives'], function(angular, directives) {
               var result = item.content.resource[scope.keys[i]].search(new RegExp(scope.data.searchText, "i"));
               if (result > -1) {
                 return true;
-                break;
               }
             };
 
