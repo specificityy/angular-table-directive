@@ -5,7 +5,12 @@ http://wilsonjs.github.io/angular-table-directive
 
 <hr>
 
-This is a sample AngularJS project with a simple table directive that provides sorting, filtering, paging and exposes the clicked row to the parent scope.
+This is a sample AngularJS project with a table directive that provides:
+
+* Sorting
+* Filtering
+* Pagination
+* Exposes the clicked row data to the parent scope.
 
 In order to run it you need to have <a href='http://nodejs.org/download/'>NPM</a> installed.
 
