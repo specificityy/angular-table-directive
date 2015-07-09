@@ -1,0 +1,63 @@
+body {
+  background-color: #ECF0F1;
+}
+div[ng-view] {
+  margin-top: 40px;
+}
+li.disabled > a {
+  pointer-events: none;
+}
+tr.pointer:hover {
+  cursor: pointer;
+  background-color: #f5f5f5;
+}
+tr.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.category {
+  font-size: 0.6em;
+  font-style: oblique;
+  font-weight: 400;
+  color: #7F8C8D;
+}
+.search-input {
+  padding: 8px 18px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  border-width: 3px;
+  font-size: 1.3em;
+  font-weight: 700;
+  font-family: 'Trebuchet MS', sans-serif;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.panel {
+  color: #34495e;
+  font-family: 'Trebuchet MS', sans-serif;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+.panel-body {
+  text-align: center;
+}
+.glyphicon {
+  vertical-align: sub;
+}
+.list-group-item div {
+  margin-left: 30px;
+}
+.list-group h3 {
+  text-align: center;
+  margin: 0;
+}
+.goBack {
+  font-size: 50px;
+}
+.copyright {
+  color: #aaa;
+  text-align: center;
+}

@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="row">
+
+
+    <div class="col-md-1">
+      <h1 title='Go back' class="goBack"><a href="" ng-click='goBack()'><span class="glyphicon glyphicon-circle-arrow-left"></span></a></h1>
+    </div>
+    <div class="col-md-6 col-md-offset-2">
+
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <img src="app/css/img/icons/svg/book.svg" alt="Compas" class="tile-image big-illustration" />
+          <h2>
+            <span ng-bind='data.display_title'></span> <span class="category"> about <span ng-bind='data.categorization'></span></span>
+          </h2>
+          <p ng-bind='data.meaningful_description'></p>
+
+        </div>
+
+        <ul class="list-group" ng-if='showStandards'>
+          <li class="list-group-item active">
+            <h3>Standards</h3>
+          </li>
+          <li class="list-group-item" ng-repeat='item in data.standards.standard'>
+            <label>{{item.id}}</label>
+            <br>
+            <div>{{item.description}}</div>
+          </li>
+        </ul>
+      </div>
+
+      <p class="copyright">
+        &copy; <span ng-bind='data.additional_text'></span>
+      </p>
+    </div>
+
+  </div>
+</div>
